@@ -15,9 +15,9 @@ namespace CQRS_poc.Queries.Customers.Handler
 
         public async Task<Customer> Handle(FindCustomerByIdQuery request, CancellationToken cancellationToken)
         {
-            var customers = await _customerRepository.FindCustomerById(request.Id);
+            var customer = await _customerRepository.FindCustomerById(request.Id);
 
-            return customers;
+            return customer;
         }
     }
 }

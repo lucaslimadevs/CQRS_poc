@@ -16,7 +16,7 @@ namespace CQRS_poc.Infra.Sqlite.Repositories
             var customer = await DbSet
                 .FirstOrDefaultAsync(e => e.Id == id && e.Active);
 
-            return customer;
+            return customer ?? new Customer();
         }
 
         public async Task<IEnumerable<Customer>> FindCustomers(string name, string address, string phone, string email)

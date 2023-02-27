@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CQRS-poc.Infra.Sqlite\CQRS-poc.Infra.Sqlite.csproj" />
+    <ProjectReference Include="..\CQRS-poc.Queries\CQRS-poc.Queries.csproj" />
   </ItemGroup>
 
 </Project>

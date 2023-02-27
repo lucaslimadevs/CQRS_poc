@@ -9,7 +9,7 @@ namespace CQRS_poc.Controllers
     [Route("[controller]")]
     public class CustomerController : ControllerBase
     {
-        private IMediator _mediator;
+        private readonly IMediator _mediator;
 
         public CustomerController(IMediator mediator)
         {
@@ -36,6 +36,14 @@ namespace CQRS_poc.Controllers
         public async Task<IActionResult> InsertCustomer([FromBody] InsertCustomerCommand command)
         {
             var result = await _mediator.Send(command);
+
+            return Ok(result);
+        }
+
+        [HttpPost("Disable/{id}")]
+        public async Task<IActionResult> DisableCustomer([FromRoute] int id)
+        {
+            var result = await _mediator.Send(new DisableCustomerCommand { Id = id });
 
             return Ok(result);
         }
