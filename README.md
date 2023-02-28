@@ -30,7 +30,7 @@ The API does not show how to implement distinct databases to read and write data
 
 ## API Reference
 
-#### Post all Customers
+#### Find Customers
 
 ```http
   POST /api/Customer/Find
@@ -43,7 +43,7 @@ The API does not show how to implement distinct databases to read and write data
 | `phone`   | `string` | `Find by Customer phone`   |
 | `email`   | `string` | `Find by Customer email`   |
 
-#### Get Customer
+#### Get Customer by Id
 
 ```http
   GET /api/Customer/${id}
@@ -67,6 +67,8 @@ The API does not show how to implement distinct databases to read and write data
 | `address` | `string` | `Customer address`         |
 | `phone`   | `string` | `Customer phone`           |
 | `email`   | `string` | `Customer email`           |
+
+#### Disable Customer
 
 ```http
   POST /api/Customer/Disable/${id}
