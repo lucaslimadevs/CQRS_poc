@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CQRS_poc.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CustomerController : ControllerBase
     {
         private readonly IMediator _mediator;
