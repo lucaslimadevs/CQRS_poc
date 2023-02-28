@@ -13,6 +13,56 @@ The example API is very simple, exposing HTTP endpoints through `/api/users` tha
 - [SQLite](https://www.sqlite.org/about.html) (for testing purposes);
 - [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) (API documentation).
 
+
+## API Reference
+
+#### Post all Customers
+
+```http
+  POST /api/Customer/Find
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name`    | `string` | `Find by customer name`    |
+| `address` | `string` | `Find by Customer address` |
+| `phone`   | `string` | `Find by Customer phone`   |
+| `email`   | `string` | `Find by Customer email`   |
+
+#### Get Customer
+
+```http
+  GET /api/Customer/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `int`    | **Required**. Id of item to fetch |
+
+
+#### Post Customer
+
+```http
+  POST /api/Customer/Insert
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      | `int`    | **Required**. Id           |
+| `name`    | `string` | `Customer name`            |
+| `address` | `string` | `Customer address`         |
+| `phone`   | `string` | `Customer phone`           |
+| `email`   | `string` | `Customer email`           |
+
+```http
+  POST /api/Customer/Disable/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------        |
+| `id`      | `int`    | **Required**. Id of item to fetch |
+
+
 ## How to Test
 
 Run the following commands, in sequence, inside the application directory:
