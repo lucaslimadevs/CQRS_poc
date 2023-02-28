@@ -4,7 +4,7 @@ Proof of Concept of a CQRS pattern, using library MediatR.
 
 Simple API built using ASP.NET Core and MediatR to demonstrate how to easily implement the CQRS pattern in .NET applications.
 
-The example API is very simple, exposing HTTP endpoints through `/api/users` that internally use MediatR to handle requests and responses.
+The example API is very simple, exposing HTTP endpoints through `/api/customers` that internally use MediatR to handle requests and responses.
 
 ## Frameworks and Libraries
 - [ASP.NET Core 6](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-6.0);
